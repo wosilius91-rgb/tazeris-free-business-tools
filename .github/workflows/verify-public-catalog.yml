@@ -1,0 +1,74 @@
+name: Verify public calculator catalogue
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-public-catalog.yml'
+      - 'calculators.py'
+      - 'tests/**'
+      - 'docs/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: public-catalogue-verification
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read the exact public source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin https://github.com/wosilius91-rgb/tazeris-free-business-tools.git
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Test calculator examples
+        run: |
+          python -m py_compile calculators.py
+          python -m unittest discover -s tests -v
+          git diff --check
+      - name: Check public product discovery links
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          from html.parser import HTMLParser
+          BASE = 'https://tazeris-money-factory-production.up.railway.app'
+          PAGES = {
+              '/free/handmade-profit-calculator': 'Handmade Product Profit Calculator',
+              '/free/craft-fair-profit-calculator': 'Craft Fair Profit Calculator',
+              '/free/reorder-point-calculator': 'Reorder Point Calculator',
+              '/free/etsy-fee-profit-calculator': 'Etsy',
+              '/collections/handmade-seller-tools': 'Handmade',
+              '/collections/etsy-seller-tools': 'Etsy',
+              '/p/handmade-seller-profit-inventory-bundle': 'Handmade Seller Profit',
+          }
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.links = []
+              def handle_starttag(self, tag, attrs):
+                  if tag == 'a':
+                      link = dict(attrs).get('href', '')
+                      if link.startswith(('/buy/', '/p/', '/free/')):
+                          self.links.append(link.split('?')[0])
+          results = []
+          for path, expected in PAGES.items():
+              req = urllib.request.Request(BASE + path, headers={'User-Agent': 'TAZERIS-Public-Catalogue-Verification/1.0'})
+              with urllib.request.urlopen(req, timeout=25) as response:
+                  assert response.status == 200, (path, response.status)
+                  assert response.geturl() == BASE + path, 'Unexpected redirect'
+                  text = response.read(600000).decode('utf-8')
+              assert expected in text, 'Expected public page missing: ' + path
+              parser = Links(); parser.feed(text)
+              assert parser.links, 'No product or free-tool links: ' + path
+              result = {'path': path, 'status': 200, 'links': sorted(set(parser.links))[:12]}
+              print(json.dumps(result)); results.append(result)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('## Public catalogue verification\n\n')
+              summary.write('Calculator unit tests and seven public landing pages were checked. No checkout was opened and no payment or email was sent.\n\n')
+              for row in results:
+                  summary.write('- HTTP 200: ' + row['path'] + '\n')
+          PY
