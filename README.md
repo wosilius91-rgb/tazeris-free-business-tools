@@ -18,6 +18,9 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Website checkout not working: repair checklist](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
 - [Telegram Bot MVP 2026: scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
 - [Android App MVP 2026: small-scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Website Repair Cost 2026: what changes the price](https://tazeris-money-factory-production.up.railway.app/guides/website-repair-cost-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Telegram Bot Cost 2026: MVP pricing and scope](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-cost-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Android MVP Cost 2026: price drivers and small scope](https://tazeris-money-factory-production.up.railway.app/guides/android-mvp-cost-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
 
 ## Fixed-scope digital services
 
@@ -37,12 +40,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
-- [Craft Fair Vendor Profit and Inventory Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-vendor-profit-inventory-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Supplier Lead-Time Reorder Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/p/supplier-lead-time-reorder-planner-handmade-sellers?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Return-Adjusted Product Margin Board](https://tazeris-money-factory-production.up.railway.app/p/return-adjusted-product-margin-board?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Multi-Channel SKU Profit and Reorder Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/multi-channel-sku-profit-reorder-sheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Freelance Quote Margin Calculator](https://tazeris-money-factory-production.up.railway.app/p/freelance-quote-margin-calculator?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair and Multi-Channel Seller Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-multi-channel-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Cottage Food Batch Cost & Market Prep Workbook](https://tazeris-money-factory-production.up.railway.app/p/cottage-food-batch-market-prep-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Handmade Maker Batch Costing and Reorder Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-maker-batch-costing-reorder-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Lead-Time Reorder Planner for Small Shopify Brands](https://tazeris-money-factory-production.up.railway.app/p/lead-time-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Craft Market Pack-Out and Sell-Through Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-market-packout-sellthrough-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Maker Wholesale Order & MOQ Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/maker-wholesale-moq-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Market-Day Capacity and Cash-at-Risk Planner](https://tazeris-money-factory-production.up.railway.app/p/market-day-capacity-cash-at-risk-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
