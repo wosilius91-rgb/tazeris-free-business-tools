@@ -19,6 +19,15 @@ Practical public planning notes that accompany the free TAZERIS browser tools an
 - [True Margin Monitoring for Small Product Businesses](true-margin-monitor-guide.md)
 - [Wholesale Maker Order Capacity Planning Guide](wholesale-maker-order-capacity-guide.md)
 
+## 2026 cost and budget guides
+
+These guides explain what changes project scope before showing the narrow TAZERIS starting offer. The starting prices are not universal market-price claims.
+
+- [Website Repair Cost 2026](website-repair-cost-2026.md) — scope drivers, checkout/platform boundaries and the focused €49 repair option.
+- [Telegram Bot Cost 2026](telegram-bot-cost-2026.md) — workflow, integrations, data and AI scope plus the narrow €79 MVP option.
+- [Android MVP Cost 2026](android-mvp-cost-2026.md) — screens, backend, accounts, integrations and release scope plus the narrow €149 MVP option.
+- [Live cost and buyer guides hub](https://tazeris-money-factory-production.up.railway.app/guides?utm_source=github&utm_medium=docs&utm_campaign=cost_guides)
+
 ## Service problem-solving guides
 
 - [Website checkout repair checklist](website-checkout-repair-checklist.md) — diagnose a broken checkout, payment confirmation or delivery flow before rebuilding anything.
