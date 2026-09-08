@@ -21,6 +21,14 @@ These short guides cover common search and planning tasks for makers and Etsy se
 - [Wholesale Maker Order Capacity Planning Guide](docs/wholesale-maker-order-capacity-guide.md)
 - [Craft Fair Profit and Restock Guide](docs/craft-fair-profit-and-restock-guide.md)
 
+## Website, bot and app problem-solving guides
+
+Start at the [TAZERIS practical guides hub](https://tazeris-money-factory-production.up.railway.app/guides?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides) or open the guide that matches the problem:
+
+- [Website checkout not working: repair checklist](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=owned&utm_campaign=service_guides) — [Markdown source](docs/website-checkout-not-working-guide.md)
+- [Telegram Bot MVP 2026: scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=service_guides) — [Markdown source](docs/telegram-bot-mvp-scope-2026.md)
+- [Android App MVP 2026: small-scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=service_guides) — [Markdown source](docs/android-app-mvp-scope-2026.md)
+
 ## Browse seller tools
 
 - [Handmade Seller Tools](https://tazeris-money-factory-production.up.railway.app/collections/handmade-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
