@@ -8,6 +8,9 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Craft Fair Profit Calculator](https://tazeris-money-factory-production.up.railway.app/free/craft-fair-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Reorder Point Calculator](https://tazeris-money-factory-production.up.railway.app/free/reorder-point-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Etsy Fee, Profit & Target Price Calculator](https://tazeris-money-factory-production.up.railway.app/free/etsy-fee-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Website Fix Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/website-fix-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Telegram Bot MVP Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/telegram-bot-mvp-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Android MVP Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/android-mvp-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
 ## Practical seller, website, bot and app guides
 
@@ -41,12 +44,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Craft Fair Inventory Loadout Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-inventory-loadout-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Reorder Radar for Small Shopify Brands](https://tazeris-money-factory-production.up.railway.app/p/reorder-radar-small-shopify-brands?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Handmade Batch Costing and Market-Day Profit Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-batch-costing-market-day-profit-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Event Profit & Restock Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-event-profit-restock-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Etsy Maker Reorder and Margin Planner](https://tazeris-money-factory-production.up.railway.app/p/etsy-maker-reorder-margin-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Product Batch Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/handmade-batch-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Market Rebook & Booth-Hour Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-market-rebook-booth-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Reorder Runway for Small Product Brands](https://tazeris-money-factory-production.up.railway.app/p/reorder-runway-small-brands?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair Profitability and Restock Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profitability-restock-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
