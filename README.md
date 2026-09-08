@@ -24,6 +24,14 @@ These short guides cover common search and planning tasks for makers and Etsy se
 - [Etsy Seller Pricing, Profit & Inventory Tools](https://tazeris-money-factory-production.up.railway.app/collections/etsy-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [About TAZERIS & how purchases work](https://tazeris-money-factory-production.up.railway.app/about?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
+## New TAZERIS tools
+
+The Money Factory keeps testing and publishing new small-business tools. These are recent live additions from the current catalog:
+
+- [Maker Market Sales, Inventory & Pricing Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/maker-market-sales-inventory-pricing-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [True Margin Monitor](https://tazeris-money-factory-production.up.railway.app/p/true-margin-monitor?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Wholesale Maker Order Capacity Planner](https://tazeris-money-factory-production.up.railway.app/p/wholesale-maker-order-capacity-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+
 ## TAZERIS fixed-scope digital services
 
 These public service pages explain the starting scope and price before the secure order flow. Standard fixed-scope orders can be started online without a sales call.
