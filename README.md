@@ -9,25 +9,23 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Reorder Point Calculator](https://tazeris-money-factory-production.up.railway.app/free/reorder-point-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Etsy Fee, Profit & Target Price Calculator](https://tazeris-money-factory-production.up.railway.app/free/etsy-fee-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
-## Practical seller guides
+## Practical seller, website, bot and app guides
 
-These short guides cover common search and planning tasks for makers and Etsy sellers. The live versions connect directly to the relevant free calculator and reusable tools; the Markdown source remains public in this repository.
+- [Practical guides hub](https://tazeris-money-factory-production.up.railway.app/guides?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Etsy Pricing Calculator 2026: Price for Real Profit](https://tazeris-money-factory-production.up.railway.app/guides/etsy-pricing-calculator-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Handmade Inventory & Reorder Tracker for Small Makers](https://tazeris-money-factory-production.up.railway.app/guides/handmade-inventory-reorder-tracker?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Craft Fair Booth Profit Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/guides/craft-fair-booth-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Website checkout not working: repair checklist](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Telegram Bot MVP 2026: scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
+- [Android App MVP 2026: small-scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides)
 
-- [Etsy Pricing Calculator 2026: Price for Real Profit](https://tazeris-money-factory-production.up.railway.app/guides/etsy-pricing-calculator-2026?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/etsy-pricing-calculator-2026-guide.md)
-- [Handmade Inventory & Reorder Tracker for Small Makers](https://tazeris-money-factory-production.up.railway.app/guides/handmade-inventory-reorder-tracker?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/handmade-inventory-reorder-tracker-guide.md)
-- [Craft Fair Booth Profit Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/guides/craft-fair-booth-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/craft-fair-booth-profit-planner-guide.md)
-- [Maker Market Sales, Inventory & Pricing Guide](docs/maker-market-sales-inventory-pricing-guide.md)
-- [True Margin Monitoring for Small Product Businesses](docs/true-margin-monitor-guide.md)
-- [Wholesale Maker Order Capacity Planning Guide](docs/wholesale-maker-order-capacity-guide.md)
-- [Craft Fair Profit and Restock Guide](docs/craft-fair-profit-and-restock-guide.md)
+## Fixed-scope digital services
 
-## Website, bot and app problem-solving guides
+These are narrow starting scopes. Read the linked service page before checkout; larger custom projects are not implied by the starting price.
 
-Start at the [TAZERIS practical guides hub](https://tazeris-money-factory-production.up.railway.app/guides?utm_source=github&utm_medium=owned&utm_campaign=buyer_guides) or open the guide that matches the problem:
-
-- [Website checkout not working: repair checklist](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=owned&utm_campaign=service_guides) — [Markdown source](docs/website-checkout-not-working-guide.md)
-- [Telegram Bot MVP 2026: scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=service_guides) — [Markdown source](docs/telegram-bot-mvp-scope-2026.md)
-- [Android App MVP 2026: small-scope checklist](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=owned&utm_campaign=service_guides) — [Markdown source](docs/android-app-mvp-scope-2026.md)
+- [Website repair from €49](https://tazeris-money-factory-production.up.railway.app/services/website-fix?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
+- [Telegram bot MVP from €79](https://tazeris-money-factory-production.up.railway.app/services/telegram-bot?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
+- [Android app MVP from €149](https://tazeris-money-factory-production.up.railway.app/services/android-mvp?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
 
 ## Browse seller tools
 
@@ -35,23 +33,16 @@ Start at the [TAZERIS practical guides hub](https://tazeris-money-factory-produc
 - [Etsy Seller Pricing, Profit & Inventory Tools](https://tazeris-money-factory-production.up.railway.app/collections/etsy-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [About TAZERIS & how purchases work](https://tazeris-money-factory-production.up.railway.app/about?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
-## New TAZERIS tools
+## Latest live TAZERIS tools
 
-The Money Factory keeps testing and publishing new small-business tools. These are recent live additions from the current catalog:
+Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
-- [Maker Market Sales, Inventory & Pricing Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/maker-market-sales-inventory-pricing-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [True Margin Monitor](https://tazeris-money-factory-production.up.railway.app/p/true-margin-monitor?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Wholesale Maker Order Capacity Planner](https://tazeris-money-factory-production.up.railway.app/p/wholesale-maker-order-capacity-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-
-## TAZERIS fixed-scope digital services
-
-These public service pages explain the starting scope and price before the secure order flow. Standard fixed-scope orders can be started online without a sales call.
-
-- [Website repair from €49](https://tazeris-money-factory-production.up.railway.app/services/website-fix?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
-- [Telegram bot MVP from €79](https://tazeris-money-factory-production.up.railway.app/services/telegram-bot?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
-- [Android app MVP from €149](https://tazeris-money-factory-production.up.railway.app/services/android-mvp?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
-
-Only the fixed scope shown on the linked order page is included at the stated starting price. Do not put passwords, card details or other secrets into public project descriptions.
+- [Craft Fair Vendor Profit and Inventory Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-vendor-profit-inventory-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Supplier Lead-Time Reorder Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/p/supplier-lead-time-reorder-planner-handmade-sellers?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Return-Adjusted Product Margin Board](https://tazeris-money-factory-production.up.railway.app/p/return-adjusted-product-margin-board?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Multi-Channel SKU Profit and Reorder Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/multi-channel-sku-profit-reorder-sheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Freelance Quote Margin Calculator](https://tazeris-money-factory-production.up.railway.app/p/freelance-quote-margin-calculator?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Craft Fair and Multi-Channel Seller Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-multi-channel-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
@@ -67,7 +58,7 @@ print(reorder_point(3, 10, 10))
 
 Run the included checks with `python -m unittest discover -s tests -v`. The Python examples run locally, make no network requests and require no API key.
 
-## Optional paid workbooks
+## Selected paid workbooks
 
 The calculators are free. For reusable spreadsheet files, compare the current [Handmade seller tools](https://tazeris-money-factory-production.up.railway.app/collections/handmade-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools) or [Etsy seller tools](https://tazeris-money-factory-production.up.railway.app/collections/etsy-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools). Descriptions, current prices and purchase terms are on the product pages.
 
