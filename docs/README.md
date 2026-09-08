@@ -21,9 +21,12 @@ Practical public planning notes that accompany the free TAZERIS browser tools an
 
 ## Service problem-solving guides
 
-- [Website checkout not working: repair path](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
-- [Telegram Bot MVP 2026 guide](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
-- [Android App MVP 2026 guide](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Website checkout repair checklist](website-checkout-repair-checklist.md) — diagnose a broken checkout, payment confirmation or delivery flow before rebuilding anything.
+- [Telegram Bot MVP checklist](telegram-bot-mvp-checklist.md) — define one narrow user workflow, failure handling and acceptance criteria.
+- [Android App MVP checklist](android-app-mvp-checklist.md) — reduce first-release scope and define device/release acceptance checks.
+- [Live website checkout repair guide](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Live Telegram Bot MVP 2026 guide](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Live Android App MVP 2026 guide](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
 
 ## Fixed-scope services
 
