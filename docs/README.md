@@ -19,6 +19,18 @@ Practical public planning notes that accompany the free TAZERIS browser tools an
 - [True Margin Monitoring for Small Product Businesses](true-margin-monitor-guide.md)
 - [Wholesale Maker Order Capacity Planning Guide](wholesale-maker-order-capacity-guide.md)
 
+## Service problem-solving guides
+
+- [Website checkout not working: repair path](https://tazeris-money-factory-production.up.railway.app/guides/website-checkout-not-working?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Telegram Bot MVP 2026 guide](https://tazeris-money-factory-production.up.railway.app/guides/telegram-bot-mvp-2026?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Android App MVP 2026 guide](https://tazeris-money-factory-production.up.railway.app/guides/android-app-mvp-2026?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+
+## Fixed-scope services
+
+- [Website repair from €49](https://tazeris-money-factory-production.up.railway.app/services/website-fix?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Telegram bot MVP from €79](https://tazeris-money-factory-production.up.railway.app/services/telegram-bot?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+- [Android app MVP from €149](https://tazeris-money-factory-production.up.railway.app/services/android-mvp?utm_source=github&utm_medium=docs&utm_campaign=service_guides)
+
 ## Live free tools
 
 - [TAZERIS Free Small Business Calculators](https://tazeris-money-factory-production.up.railway.app/free/tools?utm_source=github&utm_medium=docs&utm_campaign=docs_index)
