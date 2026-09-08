@@ -15,6 +15,16 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Etsy Seller Pricing, Profit & Inventory Tools](https://tazeris-money-factory-production.up.railway.app/collections/etsy-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [About TAZERIS & how purchases work](https://tazeris-money-factory-production.up.railway.app/about?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
+## TAZERIS fixed-scope digital services
+
+These public service pages explain the starting scope and price before the secure order flow. Standard fixed-scope orders can be started online without a sales call.
+
+- [Website repair from €49](https://tazeris-money-factory-production.up.railway.app/services/website-fix?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
+- [Telegram bot MVP from €79](https://tazeris-money-factory-production.up.railway.app/services/telegram-bot?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
+- [Android app MVP from €149](https://tazeris-money-factory-production.up.railway.app/services/android-mvp?utm_source=github&utm_medium=owned&utm_campaign=factory_services)
+
+Only the fixed scope shown on the linked order page is included at the stated starting price. Do not put passwords, card details or other secrets into public project descriptions.
+
 ## Worked examples
 
 At a craft fair, sales of 600, product costs of 180, a booth fee of 80, travel of 35, other costs of 20 and payment fees of 2.5% leave 270 before any costs or taxes not entered. Use the same currency for every input.
