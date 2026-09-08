@@ -16,6 +16,8 @@ These short guides cover common search and planning tasks for makers and Etsy se
 - [Etsy Pricing Calculator 2026: Price for Real Profit](https://tazeris-money-factory-production.up.railway.app/guides/etsy-pricing-calculator-2026?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/etsy-pricing-calculator-2026-guide.md)
 - [Handmade Inventory & Reorder Tracker for Small Makers](https://tazeris-money-factory-production.up.railway.app/guides/handmade-inventory-reorder-tracker?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/handmade-inventory-reorder-tracker-guide.md)
 - [Craft Fair Booth Profit Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/guides/craft-fair-booth-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/craft-fair-booth-profit-planner-guide.md)
+- [Maker Market Sales, Inventory & Pricing Guide](docs/maker-market-sales-inventory-pricing-guide.md)
+- [True Margin Monitoring for Small Product Businesses](docs/true-margin-monitor-guide.md)
 - [Craft Fair Profit and Restock Guide](docs/craft-fair-profit-and-restock-guide.md)
 
 ## Browse seller tools
