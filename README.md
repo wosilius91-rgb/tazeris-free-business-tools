@@ -7,6 +7,13 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Handmade Product Profit Calculator](https://tazeris-money-factory-production.up.railway.app/free/handmade-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Craft Fair Profit Calculator](https://tazeris-money-factory-production.up.railway.app/free/craft-fair-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Reorder Point Calculator](https://tazeris-money-factory-production.up.railway.app/free/reorder-point-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Etsy Fee, Profit & Target Price Calculator](https://tazeris-money-factory-production.up.railway.app/free/etsy-fee-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+
+## Browse seller tools
+
+- [Handmade Seller Tools](https://tazeris-money-factory-production.up.railway.app/collections/handmade-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Etsy Seller Pricing, Profit & Inventory Tools](https://tazeris-money-factory-production.up.railway.app/collections/etsy-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [About TAZERIS & how purchases work](https://tazeris-money-factory-production.up.railway.app/about?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
 ## Worked examples
 
@@ -24,10 +31,12 @@ Run the included checks with `python -m unittest discover -s tests -v`. The Pyth
 
 ## Optional paid workbooks
 
-The calculators are free. For reusable spreadsheet files, compare the current [TAZERIS seller tools](https://tazeris-money-factory-production.up.railway.app/collections/handmade-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools). Descriptions, current prices and purchase terms are on the product pages.
+The calculators are free. For reusable spreadsheet files, compare the current [Handmade seller tools](https://tazeris-money-factory-production.up.railway.app/collections/handmade-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools) or [Etsy seller tools](https://tazeris-money-factory-production.up.railway.app/collections/etsy-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools). Descriptions, current prices and purchase terms are on the product pages.
 
 - [Handmade Seller Profit & Inventory Bundle](https://tazeris-money-factory-production.up.railway.app/p/handmade-seller-profit-inventory-bundle?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Craft Market Booth Profit and Reconciliation Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-market-booth-profit-reconciliation-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Etsy Handmade Product Pricing and Profit Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/etsy-handmade-product-pricing-profit-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Etsy Seller True-Profit and Reorder Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/etsy-seller-true-profit-reorder-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
 Purchases are made on the TAZERIS storefront, not on GitHub. The free examples do not include the paid workbook files.
 
