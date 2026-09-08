@@ -9,6 +9,15 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Reorder Point Calculator](https://tazeris-money-factory-production.up.railway.app/free/reorder-point-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Etsy Fee, Profit & Target Price Calculator](https://tazeris-money-factory-production.up.railway.app/free/etsy-fee-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 
+## Practical seller guides
+
+These short guides cover common search and planning tasks for makers and Etsy sellers:
+
+- [Etsy Pricing Calculator 2026: Price for Profit, Not Guesswork](docs/etsy-pricing-calculator-2026-guide.md)
+- [Handmade Inventory & Reorder Tracker: A Simple System for Small Makers](docs/handmade-inventory-reorder-tracker-guide.md)
+- [Craft Fair Booth Profit Planner: Know Whether a Market Was Worth It](docs/craft-fair-booth-profit-planner-guide.md)
+- [Craft Fair Profit and Restock Guide](docs/craft-fair-profit-and-restock-guide.md)
+
 ## Browse seller tools
 
 - [Handmade Seller Tools](https://tazeris-money-factory-production.up.railway.app/collections/handmade-seller-tools?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
