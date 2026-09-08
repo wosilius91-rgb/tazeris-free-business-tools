@@ -44,12 +44,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Reorder Radar for Small Inventory Teams](https://tazeris-money-factory-production.up.railway.app/p/reorder-radar-small-inventory?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [TeamQuote Pricebook](https://tazeris-money-factory-production.up.railway.app/p/teamquote-pricebook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Wholesale Inventory and Reorder Spreadsheet for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/p/wholesale-inventory-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Inventory Loadout Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-inventory-loadout-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Reorder Radar for Small Shopify Brands](https://tazeris-money-factory-production.up.railway.app/p/reorder-radar-small-shopify-brands?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Batch Costing and Market-Day Profit Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-batch-costing-market-day-profit-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair Event Profit & Restock Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-event-profit-restock-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
