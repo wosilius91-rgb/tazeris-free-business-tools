@@ -11,11 +11,11 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 
 ## Practical seller guides
 
-These short guides cover common search and planning tasks for makers and Etsy sellers:
+These short guides cover common search and planning tasks for makers and Etsy sellers. The live versions connect directly to the relevant free calculator and reusable tools; the Markdown source remains public in this repository.
 
-- [Etsy Pricing Calculator 2026: Price for Profit, Not Guesswork](docs/etsy-pricing-calculator-2026-guide.md)
-- [Handmade Inventory & Reorder Tracker: A Simple System for Small Makers](docs/handmade-inventory-reorder-tracker-guide.md)
-- [Craft Fair Booth Profit Planner: Know Whether a Market Was Worth It](docs/craft-fair-booth-profit-planner-guide.md)
+- [Etsy Pricing Calculator 2026: Price for Real Profit](https://tazeris-money-factory-production.up.railway.app/guides/etsy-pricing-calculator-2026?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/etsy-pricing-calculator-2026-guide.md)
+- [Handmade Inventory & Reorder Tracker for Small Makers](https://tazeris-money-factory-production.up.railway.app/guides/handmade-inventory-reorder-tracker?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/handmade-inventory-reorder-tracker-guide.md)
+- [Craft Fair Booth Profit Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/guides/craft-fair-booth-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=seller_guides) — [Markdown source](docs/craft-fair-booth-profit-planner-guide.md)
 - [Craft Fair Profit and Restock Guide](docs/craft-fair-profit-and-restock-guide.md)
 
 ## Browse seller tools
