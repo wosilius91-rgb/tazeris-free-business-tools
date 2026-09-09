@@ -44,12 +44,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Craft Fair Profit & Sell-Through Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profit-sell-through-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Multi-Channel Reorder Planner for Makers](https://tazeris-money-factory-production.up.railway.app/p/multi-channel-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Break-Even & Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-break-even-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Reorder Radar for Small Inventory Teams](https://tazeris-money-factory-production.up.railway.app/p/reorder-radar-small-inventory?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [TeamQuote Pricebook](https://tazeris-money-factory-production.up.railway.app/p/teamquote-pricebook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Wholesale Inventory and Reorder Spreadsheet for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/p/wholesale-inventory-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair Inventory Loadout Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-inventory-loadout-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
