@@ -44,12 +44,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Handmade Product Costing, Pricing & Inventory Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-product-costing-pricing-inventory-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Market Cash Reconciliation & Event ROI Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-market-cash-reconciliation-event-roi-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Market Sell-Through & Restock Dashboard](https://tazeris-money-factory-production.up.railway.app/p/craft-market-sell-through-restock-dashboard?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Wholesale & Reorder Planner Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Profitability and Sell-Through Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profitability-sell-through-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Event ROI and Break-Even Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-event-roi-break-even-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Maker Batch Costing, Wholesale Margin & Reorder Workbook](https://tazeris-money-factory-production.up.railway.app/p/maker-batch-costing-wholesale-margin-reorder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
