@@ -44,12 +44,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Maker Batch Costing, Wholesale Margin & Reorder Workbook](https://tazeris-money-factory-production.up.railway.app/p/maker-batch-costing-wholesale-margin-reorder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Batch Costing and Materials Reorder Workbook](https://tazeris-money-factory-production.up.railway.app/p/handmade-batch-costing-materials-reorder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Product Maker Batch Costing and Reorder Planner](https://tazeris-money-factory-production.up.railway.app/p/product-maker-batch-costing-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Market Circuit Profit Planner for Handmade Sellers](https://tazeris-money-factory-production.up.railway.app/p/market-circuit-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Profit & Sell-Through Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profit-sell-through-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Multi-Channel Reorder Planner for Makers](https://tazeris-money-factory-production.up.railway.app/p/multi-channel-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair Break-Even & Profit Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-break-even-profit-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
