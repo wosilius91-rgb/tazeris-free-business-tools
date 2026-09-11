@@ -11,7 +11,6 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Website Fix Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/website-fix-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Telegram Bot MVP Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/telegram-bot-mvp-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Android MVP Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/android-mvp-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
-- [Browse live free Telegram bots](https://tazeris-bot-factory-production.up.railway.app/?utm_source=github&utm_medium=owned&utm_campaign=live_bot_catalog)
 
 ## Practical seller, website, bot and app guides
 
@@ -45,6 +44,9 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Craft Fair Profit, Inventory & Booth Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profit-inventory-booth-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Landed Cost & Reseller Profit Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-reseller-profit-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Handmade Seller Batch Costing and Reorder Workbook](https://tazeris-money-factory-production.up.railway.app/p/handmade-seller-batch-costing-reorder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Reseller Inventory, Sell-Through and Profit Dashboard](https://tazeris-money-factory-production.up.railway.app/p/reseller-sell-through-profit-dashboard?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Market Booth Profit & Inventory Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-market-booth-profit-inventory-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Landed-Cost Break-Even ROAS Calculator](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-break-even-roas-calculator?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
@@ -54,9 +56,6 @@ Money Factory keeps testing and publishing new small-business tools. Only public
 - [Craft Fair Pricing, Booth Inventory & Sales Reconciliation Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-pricing-booth-inventory-sales-reconciliation?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Wholesale Line Sheet and Reorder Planner](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-line-sheet-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Product Costing, Pricing & Inventory Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-product-costing-pricing-inventory-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Market Cash Reconciliation & Event ROI Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-market-cash-reconciliation-event-roi-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Market Sell-Through & Restock Dashboard](https://tazeris-money-factory-production.up.railway.app/p/craft-market-sell-through-restock-dashboard?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Handmade Wholesale & Reorder Planner Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
@@ -98,3 +97,18 @@ The original Python examples in this repository use the MIT license. Paid workbo
 - [RSS feed](https://tazeris-money-factory-production.up.railway.app/feed.xml?utm_source=github&utm_medium=owned&utm_campaign=product_feed)
 - [JSON Feed](https://tazeris-money-factory-production.up.railway.app/feed.json?utm_source=github&utm_medium=owned&utm_campaign=product_feed)
 These feeds list the latest public LIVE TAZERIS tools and can be used by feed readers and other compatible discovery services.
+
+
+## More free business calculators
+- [Wholesale Pricing & Margin Calculator](https://tazeris-money-factory-production.up.railway.app/free/wholesale-pricing-calculator?utm_source=github&utm_medium=owned&utm_campaign=buyer_tools)
+- [Inventory Turnover & Days on Hand Calculator](https://tazeris-money-factory-production.up.railway.app/free/inventory-turnover-days-on-hand-calculator?utm_source=github&utm_medium=owned&utm_campaign=buyer_tools)
+- [Landed Cost & Reseller Profit Calculator](https://tazeris-money-factory-production.up.railway.app/free/landed-cost-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=buyer_tools)
+
+
+## Free tools worldwide
+- [Deutsch](https://tazeris-money-factory-production.up.railway.app/de/kostenlose-business-tools?utm_source=github&utm_medium=owned&utm_campaign=global_tools)
+- [Polski](https://tazeris-money-factory-production.up.railway.app/pl/darmowe-narzedzia-biznesowe?utm_source=github&utm_medium=owned&utm_campaign=global_tools)
+- [Español](https://tazeris-money-factory-production.up.railway.app/es/herramientas-negocio-gratis?utm_source=github&utm_medium=owned&utm_campaign=global_tools)
+- [Français](https://tazeris-money-factory-production.up.railway.app/fr/outils-business-gratuits?utm_source=github&utm_medium=owned&utm_campaign=global_tools)
+- [Italiano](https://tazeris-money-factory-production.up.railway.app/it/strumenti-business-gratuiti?utm_source=github&utm_medium=owned&utm_campaign=global_tools)
+- [Português](https://tazeris-money-factory-production.up.railway.app/pt/ferramentas-negocio-gratis?utm_source=github&utm_medium=owned&utm_campaign=global_tools)
