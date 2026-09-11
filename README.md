@@ -91,3 +91,9 @@ For product questions or purchase help, use [TAZERIS support](https://tazeris-mo
 ## License
 
 The original Python examples in this repository use the MIT license. Paid workbooks have their own purchase terms; they are not included in this license.
+
+
+## Subscribe to new TAZERIS tools
+- [RSS feed](https://tazeris-money-factory-production.up.railway.app/feed.xml?utm_source=github&utm_medium=owned&utm_campaign=product_feed)
+- [JSON Feed](https://tazeris-money-factory-production.up.railway.app/feed.json?utm_source=github&utm_medium=owned&utm_campaign=product_feed)
+These feeds list the latest public LIVE TAZERIS tools and can be used by feed readers and other compatible discovery services.
