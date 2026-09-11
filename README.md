@@ -11,6 +11,7 @@ Free browser tools and small, dependency-free Python examples for makers and sma
 - [Website Fix Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/website-fix-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Telegram Bot MVP Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/telegram-bot-mvp-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
 - [Android MVP Scope Checker](https://tazeris-money-factory-production.up.railway.app/free/android-mvp-scope-checker?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
+- [Browse live free Telegram bots](https://tazeris-bot-factory-production.up.railway.app/?utm_source=github&utm_medium=owned&utm_campaign=live_bot_catalog)
 
 ## Practical seller, website, bot and app guides
 
