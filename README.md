@@ -44,12 +44,12 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Craft Fair Cash Reconciliation and Restock Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-cash-reconciliation-restock-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Pricing, Booth Inventory & Sales Reconciliation Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-pricing-booth-inventory-sales-reconciliation?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Wholesale Line Sheet and Reorder Planner](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-line-sheet-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Product Costing, Pricing & Inventory Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-product-costing-pricing-inventory-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Market Cash Reconciliation & Event ROI Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-market-cash-reconciliation-event-roi-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Market Sell-Through & Restock Dashboard](https://tazeris-money-factory-production.up.railway.app/p/craft-market-sell-through-restock-dashboard?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Handmade Wholesale & Reorder Planner Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
