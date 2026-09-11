@@ -2,6 +2,14 @@
 
 Free browser tools and small, dependency-free Python examples for makers and small sellers. You can use the free tools without buying a workbook.
 
+## TAZERIS Network
+This repository is one public discovery channel for the wider TAZERIS network. Use the full network guide to choose the matching live factory.
+
+- [All TAZERIS factories and public services](./TAZERIS-NETWORK.md)
+- [Free Telegram bots](https://tazeris-bot-factory-production.up.railway.app/?utm_source=github&utm_medium=owned&utm_campaign=tazeris_network)
+- [Website, Telegram & Android services](https://tazeris-service-storefront-production.up.railway.app/?utm_source=github&utm_medium=owned&utm_campaign=tazeris_network)
+- [Automation APIs for AI agents](https://tazeris-app-factory-production.up.railway.app/.well-known/x402?utm_source=github&utm_medium=owned&utm_campaign=tazeris_network)
+
 ## Use a calculator in your browser
 
 - [Handmade Product Profit Calculator](https://tazeris-money-factory-production.up.railway.app/free/handmade-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
@@ -44,6 +52,7 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Landed-Cost Reorder Planner for Makers](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-reorder-planner-makers?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Profit, Inventory & Booth Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profit-inventory-booth-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Landed Cost & Reseller Profit Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-reseller-profit-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Seller Batch Costing and Reorder Workbook](https://tazeris-money-factory-production.up.railway.app/p/handmade-seller-batch-costing-reorder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
@@ -55,7 +64,6 @@ Money Factory keeps testing and publishing new small-business tools. Only public
 - [Craft Fair Cash Reconciliation and Restock Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-cash-reconciliation-restock-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Pricing, Booth Inventory & Sales Reconciliation Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-pricing-booth-inventory-sales-reconciliation?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Wholesale Line Sheet and Reorder Planner](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-line-sheet-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Handmade Product Costing, Pricing & Inventory Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-product-costing-pricing-inventory-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
