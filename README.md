@@ -52,6 +52,8 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Craft Fair Inventory and Reorder Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-inventory-reorder-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
+- [Stocky Replacement Reorder Planner](https://tazeris-money-factory-production.up.railway.app/p/stocky-replacement-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Event ROI and Reconciliation Workbook](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-event-roi-reconciliation-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Landed-Cost Reorder Planner for Makers](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-reorder-planner-makers?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Craft Fair Profit, Inventory & Booth Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profit-inventory-booth-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
@@ -62,8 +64,6 @@ Money Factory keeps testing and publishing new small-business tools. Only public
 - [Landed-Cost Break-Even ROAS Calculator](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-break-even-roas-calculator?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Product Costing and Reorder Dashboard](https://tazeris-money-factory-production.up.railway.app/p/handmade-product-costing-reorder-dashboard?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Wholesale and Craft-Fair Price Ladder Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-craft-fair-price-ladder?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair Cash Reconciliation and Restock Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-cash-reconciliation-restock-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Craft Fair Pricing, Booth Inventory & Sales Reconciliation Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-pricing-booth-inventory-sales-reconciliation?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
