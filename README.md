@@ -10,6 +10,13 @@ This repository is one public discovery channel for the wider TAZERIS network. U
 - [Website, Telegram & Android services](https://tazeris-service-storefront-production.up.railway.app/?utm_source=github&utm_medium=owned&utm_campaign=tazeris_network)
 - [Automation APIs for AI agents](https://tazeris-app-factory-production.up.railway.app/.well-known/x402?utm_source=github&utm_medium=owned&utm_campaign=tazeris_network)
 
+## Website audit APIs
+
+TAZERIS provides five focused public-website checks through RunPay: technical audit, SEO basics, contact readiness, image alt coverage and structured data. Each request inspects one public website and returns the corresponding check results.
+
+- [TAZERIS audit API descriptions and capabilities](https://web-production-c22b9.up.railway.app/.well-known/agent-card.json)
+- [RunPay integration documentation](https://getrunpay.com/docs)
+
 ## Use a calculator in your browser
 
 - [Handmade Product Profit Calculator](https://tazeris-money-factory-production.up.railway.app/free/handmade-profit-calculator?utm_source=github&utm_medium=owned&utm_campaign=free_tools)
@@ -52,6 +59,7 @@ These are narrow starting scopes. Read the linked service page before checkout; 
 
 Money Factory keeps testing and publishing new small-business tools. Only public LIVE digital and hosted-tool links are listed here; private product packages and customer data are never exported.
 
+- [Handmade Wholesale Pricing and Reorder Planner](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-pricing-reorder-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Batch Costing and Wholesale Price Ladder Workbook for Makers](https://tazeris-money-factory-production.up.railway.app/p/batch-costing-wholesale-price-ladder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Wholesale Margin & Batch Costing Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/handmade-wholesale-margin-batch-costing-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Reorder Runway](https://tazeris-money-factory-production.up.railway.app/p/reorder-runway-inventory-alerts?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
@@ -63,7 +71,6 @@ Money Factory keeps testing and publishing new small-business tools. Only public
 - [Craft Fair Profit, Inventory & Booth Planner](https://tazeris-money-factory-production.up.railway.app/p/craft-fair-profit-inventory-booth-planner?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Landed Cost & Reseller Profit Spreadsheet](https://tazeris-money-factory-production.up.railway.app/p/landed-cost-reseller-profit-spreadsheet?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 - [Handmade Seller Batch Costing and Reorder Workbook](https://tazeris-money-factory-production.up.railway.app/p/handmade-seller-batch-costing-reorder-workbook?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
-- [Reseller Inventory, Sell-Through and Profit Dashboard](https://tazeris-money-factory-production.up.railway.app/p/reseller-sell-through-profit-dashboard?utm_source=github&utm_medium=owned&utm_campaign=new_tools)
 
 ## Worked examples
 
