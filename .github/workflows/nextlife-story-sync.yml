@@ -1,0 +1,58 @@
+name: Next Life RP.lt — vientisas 52 sekundžių filmas
+on:
+  push:
+    branches:
+      - nextlife-story-sync-20261016
+    paths:
+      - nextlife-sync/**
+      - .github/workflows/nextlife-story-sync.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  checked-video-export:
+    name: Full HD MP4 with native dialogue and frame QA
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install film renderer and exact text fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install --disable-pip-version-check Pillow
+          ffmpeg -hide_banner -version | head -2
+      - name: Download existing visuals and sound, render one continuous movie, decode and inspect
+        run: |
+          python -u nextlife-sync/render.py
+      - name: Save the real movie and proof contact sheet
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: NEXT_LIFE_RP_LT_VIENTISAS_VIDEO_52s
+          path: |
+            nextlife-sync/output/NEXT_LIFE_RP_LT_VIENTISA_REKLAMA_52s.mp4
+            nextlife-sync/output/FILMO_KADRU_PATIKRA.jpg
+            nextlife-sync/output/PATIKROS_REZULTATAS.json
+          retention-days: 45
+          if-no-files-found: error
+          compression-level: 0
+      - name: Publish working full MP4 download
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create nextlife-2026-10-16-synced-52s \
+            nextlife-sync/output/NEXT_LIFE_RP_LT_VIENTISA_REKLAMA_52s.mp4 \
+            nextlife-sync/output/FILMO_KADRU_PATIKRA.jpg \
+            nextlife-sync/output/PATIKROS_REZULTATAS.json \
+            --repo "wosilius91-rgb/tazeris-free-business-tools" \
+            --target "$GITHUB_SHA" \
+            --title "Next Life RP.lt — vientisa 52 sekundžių reklama" \
+            --notes "Naujai sugeneruotos 5 scenos. Namai ir ausinės, atvykęs automobilis ir keleivio įlipimas, pokalbis automobilyje, darbas bei atlygis ir bendravimas su draugais. Galutinis tikslus NEXT LIFE RP.lt titras. Visas filmas dekoduotas ir patikrintas dėl juodų atkarpų. Kalbos ir veiksmų tikslumą vertinti peržiūrint filmą." \
+            --latest=false
