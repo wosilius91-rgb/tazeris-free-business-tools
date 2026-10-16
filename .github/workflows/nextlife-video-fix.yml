@@ -1,0 +1,55 @@
+name: Next Life RP.lt | checked 50-second film
+on:
+  push:
+    branches:
+      - nextlife-video-fix-20261016
+    paths:
+      - nextlife-video/**
+      - .github/workflows/nextlife-video-fix.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  produce-verified-mp4:
+    name: Produce, decode and inspect all 50 seconds
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image handling and inspect encoder
+        run: |
+          python -m pip install --disable-pip-version-check Pillow
+          ffmpeg -hide_banner -version | head -3
+          ffmpeg -hide_banner -filters | grep -E '( ass | drawtext | blackdetect )'
+      - name: Download completed Runway scenes, render video, verify frames and audio
+        run: |
+          python -u nextlife-video/render.py
+      - name: Retain video and QA contact sheet for direct download
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: NEXT_LIFE_RP_LT_TIKRAS_VIDEO_50s
+          path: |
+            nextlife-video/output/NEXT_LIFE_RP_LT_REKLAMA_50s.mp4
+            nextlife-video/output/KADRU_PATIKRA.jpg
+            nextlife-video/output/PATIKRA.json
+          retention-days: 45
+          if-no-files-found: error
+          compression-level: 0
+      - name: Publish direct MP4 download as public release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create nextlife-2026-10-16-verified-ad \
+            nextlife-video/output/NEXT_LIFE_RP_LT_REKLAMA_50s.mp4 \
+            nextlife-video/output/KADRU_PATIKRA.jpg \
+            nextlife-video/output/PATIKRA.json \
+            --repo "wosilius91-rgb/tazeris-free-business-tools" \
+            --target "$GITHUB_SHA" \
+            --title "Next Life RP.lt — 50 sek. reklaminis filmas" \
+            --notes "Tikras vientisas 1080x1920 MP4, patikrinta visa 50 sek. vaizdo eiga ir garsas. 3 scenos, lietuviski balsai, muzika ir tikslus serverio pavadinimas. Atsisiusti MP4 is Assets." \
+            --latest=false
