@@ -4,7 +4,7 @@ from urllib.parse import urlparse,parse_qs
 from ddgs import DDGS
 class Handler(BaseHTTPRequestHandler):
  def send(self,status,data,kind):
-  self.send_response(status);self.send_header('Content-Type',kind);self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+  self.send_response(status);self.send_header('Content-Type',kind);self.send_header('Cache-Control','no-store');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
  def do_GET(self):
   p=urlparse(self.path)
   if p.path=='/':
@@ -14,10 +14,14 @@ class Handler(BaseHTTPRequestHandler):
    out=[];seen=set()
    try:
     if q:
-     for x in DDGS(timeout=12).text(q+' naudota automobilio detalė kaina EUR',region='lt-lt',max_results=20):
+     results=[]
+     for query in [q+' used car part price EUR',q+' naudota detalė kaina €']:
+      try:results.extend(DDGS(timeout=10).text(query,region='lt-lt',max_results=20))
+      except Exception:continue
+     for x in results:
       url=x.get('href','');title=x.get('title','');body=x.get('body','')
       if url in seen or urlparse(url).scheme not in ('http','https'):continue
-      matches=re.findall(r'(?:€\\s*(\\d+(?:[.,]\\d{1,2})?)|(\\d+(?:[.,]\\d{1,2})?)\\s*(?:€|EUR\\b))',title+' '+body,re.I)
+      matches=re.findall(r'(?:€\s*(\d+(?:[.,]\d{1,2})?)|(\d+(?:[.,]\d{1,2})?)\s*(?:€|EUR\b))',title+' '+body,re.I)
       vals={float((a or b).replace(',','.')) for a,b in matches}
       if len(vals)==1:
        v=vals.pop()
