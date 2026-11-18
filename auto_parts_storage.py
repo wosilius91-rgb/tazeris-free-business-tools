@@ -63,3 +63,17 @@ def list_items():
     with connection() as conn:
         rows = conn.execute("SELECT id,payload,revision FROM auto_parts_inventory ORDER BY created_at DESC").fetchall()
     return [dict(payload,id=str(key),revision=revision) for key,payload,revision in rows]
+
+
+def reserve_login_attempt():
+    """Global persistent throttle, atomic across workers."""
+    with connection() as conn:
+        conn.execute("""CREATE TABLE IF NOT EXISTS auto_parts_login_throttle (
+            bucket bigint PRIMARY KEY, attempts integer NOT NULL)""")
+        conn.execute("DELETE FROM auto_parts_login_throttle WHERE bucket < floor(extract(epoch from now()) / 900)::bigint - 1")
+        row = conn.execute("""INSERT INTO auto_parts_login_throttle (bucket, attempts)
+            VALUES (floor(extract(epoch from now()) / 900)::bigint, 1)
+            ON CONFLICT (bucket) DO UPDATE SET attempts=auto_parts_login_throttle.attempts+1
+            WHERE auto_parts_login_throttle.attempts < 5
+            RETURNING attempts""").fetchone()
+        return row is not None
