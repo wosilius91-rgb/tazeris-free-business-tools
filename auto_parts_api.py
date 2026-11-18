@@ -58,8 +58,13 @@ def handle(h):
             if origin!="https://tazeris-auto-parts.onrender.com":
                 reply(h,403,{"error":"Invalid origin"});return True
             if path=="/api/login":
-                # Persistent rate limiting must be configured before exposing login.
-                reply(h,503,{"error":"Login not enabled until rate limiting is configured"})
+                credentials=body(h)
+                if not store.reserve_login_attempt():
+                    reply(h,429,{"error":"Per daug bandymų. Bandykite vėliau."})
+                elif not auth.verify_password(credentials.get("password")):
+                    reply(h,401,{"error":"Neteisingas slaptažodis"})
+                else:
+                    reply(h,200,{"ok":True},auth.session_cookie(auth.issue_session()))
             elif not admin(h): reply(h,401,{"error":"Unauthorized"})
             elif path=="/api/logout": reply(h,200,{"ok":True},auth.clear_cookie())
             else: reply(h,404,{"error":"Not found"})
