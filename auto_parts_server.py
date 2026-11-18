@@ -15,10 +15,11 @@ class Handler(BaseHTTPRequestHandler):
    out=[];seen=set()
    try:
     if q:
-     results=[]
+     results=[]; failures=[]
      def lookup(query):
       try:return DDGS(timeout=8).text(query,region='wt-wt',max_results=15)
-      except Exception:return []
+      except Exception as e:
+       failures.append(type(e).__name__);return []
      with ThreadPoolExecutor(max_workers=4) as pool:
       for batch in pool.map(lookup,[q+' used car part price EUR',q+' naudota detalė kaina €',q+' spare part €',q+' gebraucht Ersatzteil EUR']):results.extend(batch)
      for x in results:
@@ -31,7 +32,10 @@ class Handler(BaseHTTPRequestHandler):
        v=next(iter(vals))
        if 1<=v<=10000:out.append(dict(price=v,url=url,title=title));seen.add(url)
     out.sort(key=lambda x:x['price'])
+    if q and not results and failures:
+     self.send(503,json.dumps({'error':'Paieškos šaltiniai laikinai nepasiekiami','prices':[]}).encode(),'application/json');return
     self.send(200,json.dumps({'prices':out}).encode(),'application/json')
    except Exception:self.send(503,b'{"error":"Paieska laikinai nepasiekiama","prices":[]}','application/json')
   else:self.send(404,b'Not found','text/plain')
-ThreadingHTTPServer(('0.0.0.0',int(os.getenv('PORT','10000'))),Handler).serve_forever()
+if __name__=='__main__':
+ ThreadingHTTPServer(('0.0.0.0',int(os.getenv('PORT','10000'))),Handler).serve_forever()
