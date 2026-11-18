@@ -1,4 +1,5 @@
 import os,json,re
+from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from urllib.parse import urlparse,parse_qs
 from ddgs import DDGS
@@ -15,16 +16,19 @@ class Handler(BaseHTTPRequestHandler):
    try:
     if q:
      results=[]
-     for query in [q+' used car part price EUR',q+' naudota detalė kaina €',q+' spare part €',q+' gebraucht Ersatzteil EUR']:
-      try:results.extend(DDGS(timeout=10).text(query,region='lt-lt',max_results=20))
-      except Exception:continue
+     def lookup(query):
+      try:return DDGS(timeout=8).text(query,region='wt-wt',max_results=15)
+      except Exception:return []
+     with ThreadPoolExecutor(max_workers=4) as pool:
+      for batch in pool.map(lookup,[q+' used car part price EUR',q+' naudota detalė kaina €',q+' spare part €',q+' gebraucht Ersatzteil EUR']):results.extend(batch)
      for x in results:
       url=x.get('href','');title=x.get('title','');body=x.get('body','')
       if url in seen or urlparse(url).scheme not in ('http','https'):continue
       matches=re.findall(r'(?:€\s*(\d+(?:[.,]\d{1,2})?)|(\d+(?:[.,]\d{1,2})?)\s*(?:€|EUR\b))',title+' '+body,re.I)
       vals={float((a or b).replace(',','.')) for a,b in matches}
-      if vals:
-       v=min(vals)
+      vals={v for v in vals if 1<=v<=10000}
+      if len(vals)==1:
+       v=next(iter(vals))
        if 1<=v<=10000:out.append(dict(price=v,url=url,title=title));seen.add(url)
     out.sort(key=lambda x:x['price'])
     self.send(200,json.dumps({'prices':out}).encode(),'application/json')
