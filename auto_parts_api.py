@@ -52,6 +52,16 @@ def handle(h):
                 item=store.get_image(path.rsplit("/",1)[1])
                 if not item: reply(h,404,{"error":"Not found"})
                 else: h.send(200,item[1],item[0])
+            elif path=="/api/report":
+                if not admin(h): reply(h,401,{"error":"Unauthorized"})
+                else:
+                    from urllib.parse import parse_qs
+                    from datetime import datetime, timezone
+                    from auto_parts_domain import sales_report
+                    period=parse_qs(urlparse(h.path).query).get("period",["7d"])[0]
+                    if period not in ("7d","1m","3m","6m","12m"): raise ValueError("Invalid period")
+                    store.initialize()
+                    reply(h,200,sales_report(store.list_items(),period,datetime.now(timezone.utc)))
             else: reply(h,404,{"error":"Not found"})
         elif h.command=="POST":
             origin=h.headers.get("Origin","")
@@ -67,6 +77,12 @@ def handle(h):
                     reply(h,200,{"ok":True},auth.session_cookie(auth.issue_session()))
             elif not admin(h): reply(h,401,{"error":"Unauthorized"})
             elif path=="/api/logout": reply(h,200,{"ok":True},auth.clear_cookie())
+            elif path=="/api/upload":
+                data=body(h)
+                raw=base64.b64decode(data["data"],validate=True)
+                store.initialize()
+                key=store.put_image(raw,data["mime"])
+                reply(h,201,{"photo":"/api/image/"+key})
             else: reply(h,404,{"error":"Not found"})
         else: reply(h,405,{"error":"Method not allowed"})
     except (ValueError,TypeError,KeyError): reply(h,400,{"error":"Invalid request"})
