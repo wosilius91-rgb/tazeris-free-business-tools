@@ -3,10 +3,14 @@ from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from urllib.parse import urlparse,parse_qs
 from ddgs import DDGS
+import auto_parts_api
 class Handler(BaseHTTPRequestHandler):
  def send(self,status,data,kind):
-  self.send_response(status);self.send_header('Content-Type',kind);self.send_header('Cache-Control','no-store');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+  self.send_response(status);self.send_header('Content-Type',kind);self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
+ def do_POST(self):
+  if not auto_parts_api.handle(self):self.send(404,b'Not found','text/plain')
  def do_GET(self):
+  if auto_parts_api.handle(self):return
   p=urlparse(self.path)
   if p.path=='/':
    with open('auto_parts.html','rb') as f:self.send(200,f.read(),'text/html; charset=utf-8')
