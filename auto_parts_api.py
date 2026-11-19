@@ -29,7 +29,7 @@ def body(h):
     return json.loads(h.rfile.read(n))
 
 def public_item(x):
-    return {k:x[k] for k in ("id","name","description","market","quick","status","sold_at","photo") if k in x}
+    return {k:x[k] for k in ("id","name","description","market","quick","status","sold_at","photo","actual_price_cents") if k in x}
 
 def handle(h):
     path=urlparse(h.path).path
@@ -67,6 +67,7 @@ def handle(h):
                 reply(h,403,{"error":"Invalid origin"});return True
             if path=="/api/login":
                 credentials=body(h)
+                store.initialize()
                 if not store.reserve_login_attempt():
                     reply(h,429,{"error":"Per daug bandymų. Bandykite vėliau."})
                 elif not auth.verify_password(credentials.get("password")):
