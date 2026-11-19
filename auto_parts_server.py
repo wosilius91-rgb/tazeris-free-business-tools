@@ -14,6 +14,9 @@ class Handler(BaseHTTPRequestHandler):
   p=urlparse(self.path)
   if p.path=='/':
    with open('auto_parts.html','rb') as f:self.send(200,f.read(),'text/html; charset=utf-8')
+  elif p.path=='/auto-parts-workshop.webp':
+   with open(os.path.join(os.path.dirname(__file__),'auto-parts-workshop.webp'),'rb') as f:
+    self.send(200,f.read(),'image/webp')
   elif p.path=='/prices':
    q=parse_qs(p.query).get('q',[''])[0][:200]
    out=[];seen=set()
