@@ -29,7 +29,7 @@ def body(h):
     return json.loads(h.rfile.read(n))
 
 def public_item(x):
-    return {k:x[k] for k in ("id","name","description","market","quick","sold","soldAt","photo") if k in x}
+    return {k:x[k] for k in ("id","name","description","market","quick","status","sold_at","photo") if k in x}
 
 def handle(h):
     path=urlparse(h.path).path
@@ -42,11 +42,9 @@ def handle(h):
                 items=store.list_items()
                 if not admin(h):
                     from datetime import datetime, timezone
-                    import calendar
+                    from auto_parts_domain import public_visible
                     now=datetime.now(timezone.utc)
-                    y,m=(now.year-1,12) if now.month==1 else (now.year,now.month-1)
-                    cutoff=now.replace(year=y,month=m,day=min(now.day,calendar.monthrange(y,m)[1])).timestamp()*1000
-                    items=[public_item(x) for x in items if not x.get("sold") or x.get("soldAt",0)>=cutoff]
+                    items=[public_item(x) for x in items if public_visible(x,now)]
                 reply(h,200,{"items":items})
             elif re.fullmatch(r"/api/image/[0-9a-f]{64}",path):
                 item=store.get_image(path.rsplit("/",1)[1])
@@ -83,6 +81,32 @@ def handle(h):
                 store.initialize()
                 key=store.put_image(raw,data["mime"])
                 reply(h,201,{"photo":"/api/image/"+key})
+            elif path=="/api/items":
+                from auto_parts_domain import validate_valuation
+                data=body(h)
+                name=data["name"].strip()
+                description=data["description"].strip()
+                photo=data["photo"]
+                sources=data["sources"]
+                if not name or len(name)>200 or not description or len(description)>10000: raise ValueError("Invalid description")
+                if not re.fullmatch(r"/api/image/[0-9a-f]{64}",photo): raise ValueError("Invalid photo")
+                if not store.get_image(photo.rsplit("/",1)[1]): raise ValueError("Missing photo")
+                market,quick=validate_valuation(data["market"],data["quick"],sources)
+                payload=dict(name=name,description=description,photo=photo,market=market/100,quick=quick/100,sources=sources,status="available")
+                reply(h,201,{"id":store.insert_item(payload)})
+            elif re.fullmatch(r"/api/items/[0-9a-f-]{36}/sell",path):
+                from auto_parts_domain import money
+                from datetime import datetime, timezone
+                data=body(h)
+                key=path.split("/")[3]
+                item=next((x for x in store.list_items() if x["id"]==key),None)
+                if not item: reply(h,404,{"error":"Not found"})
+                elif item["status"]!="available" or item["revision"]!=data["revision"]: reply(h,409,{"error":"Conflict"})
+                else:
+                    revision=item.pop("revision")
+                    item.pop("id")
+                    item.update(status="sold",sold_at=datetime.now(timezone.utc).isoformat(),actual_price_cents=money(data["actual_price"]))
+                    reply(h,200,{"revision":store.update_item(key,item,revision)})
             else: reply(h,404,{"error":"Not found"})
         else: reply(h,405,{"error":"Method not allowed"})
     except (ValueError,TypeError,KeyError): reply(h,400,{"error":"Invalid request"})
