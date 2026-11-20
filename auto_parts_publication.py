@@ -75,3 +75,31 @@ def record_sale_closures(conn, inventory_id):
     for platform, price in rows:
         record_blocked(conn, inventory_id, platform, "close", int(price))
     return len(rows)
+
+
+def listing_status(conn, inventory_id):
+    """Read-only administrative view of external publication and closure state.
+
+    A queued or blocked closure must never be presented as a confirmed closure.
+    """
+    initialize(conn)
+    listings = conn.execute("""SELECT platform, external_id, external_url, status,
+        last_price_cents, last_error, updated_at
+        FROM auto_parts_external_listings WHERE inventory_id=%s ORDER BY platform""",
+        (inventory_id,)).fetchall()
+    jobs = conn.execute("""SELECT platform, action, price_cents, status, attempts,
+        last_error, created_at FROM auto_parts_listing_jobs
+        WHERE inventory_id=%s ORDER BY created_at DESC, id DESC LIMIT 100""",
+        (inventory_id,)).fetchall()
+    return {
+        "listings": [dict(platform=p, external_id=eid, external_url=url,
+            status=status, last_price_cents=price, last_error=error,
+            updated_at=updated.isoformat() if updated else None)
+            for p,eid,url,status,price,error,updated in listings],
+        "jobs": [dict(platform=p, action=a, price_cents=price,
+            status=status, attempts=attempts, last_error=error,
+            created_at=created.isoformat() if created else None)
+            for p,a,price,status,attempts,error,created in jobs],
+        "connectors": {platform: ("enabled" if platform in ENABLED_CONNECTORS
+            else "not_connected") for platform in PLATFORMS},
+    }
