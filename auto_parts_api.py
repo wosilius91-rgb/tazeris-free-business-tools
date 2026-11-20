@@ -50,6 +50,15 @@ def handle(h):
                 item=store.get_image(path.rsplit("/",1)[1])
                 if not item: reply(h,404,{"error":"Not found"})
                 else: h.send(200,item[1],item[0])
+            elif re.fullmatch(r"/api/items/[0-9a-f-]{36}/publications",path):
+                if not admin(h): reply(h,401,{"error":"Unauthorized"})
+                else:
+                    import auto_parts_publication as publication
+                    key=path.split("/")[3]
+                    with store.connection() as conn:
+                        exists=conn.execute("SELECT 1 FROM auto_parts_inventory WHERE id=%s",(key,)).fetchone()
+                        if not exists: reply(h,404,{"error":"Not found"})
+                        else: reply(h,200,publication.listing_status(conn,key))
             elif path=="/api/report":
                 if not admin(h): reply(h,401,{"error":"Unauthorized"})
                 else:
