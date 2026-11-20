@@ -104,6 +104,23 @@ def handle(h):
                 market,quick=validate_valuation(data["market"],data["quick"],sources)
                 payload=dict(name=name,description=description,photo=photo,market=market/100,quick=quick/100,sources=sources,status="available")
                 reply(h,201,{"id":store.insert_item(payload)})
+            elif re.fullmatch(r"/api/items/[0-9a-f-]{36}/price",path):
+                from auto_parts_domain import money
+                data=body(h)
+                key=path.split("/")[3]
+                item=next((x for x in store.list_items() if x["id"]==key),None)
+                if not item: reply(h,404,{"error":"Not found"})
+                elif item["status"]!="available" or item["revision"]!=data["revision"]:
+                    reply(h,409,{"error":"Conflict"})
+                else:
+                    # Only the warehouse quick-sale price may be published externally.
+                    cents=money(data["quick"])
+                    if cents<=0: raise ValueError("Invalid quick price")
+                    revision=item.pop("revision")
+                    item.pop("id")
+                    item["quick"]=cents/100
+                    reply(h,200,{"revision":store.update_item(key,item,revision),
+                                 "publication":"not_connected"})
             elif re.fullmatch(r"/api/items/[0-9a-f-]{36}/sell",path):
                 from auto_parts_domain import money
                 from datetime import datetime, timezone
