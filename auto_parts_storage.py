@@ -57,6 +57,10 @@ def update_item(key, payload, revision):
         row = conn.execute("UPDATE auto_parts_inventory SET payload=%s::jsonb, revision=revision+1 WHERE id=%s AND revision=%s RETURNING revision", (json.dumps(payload,ensure_ascii=False),key,revision)).fetchone()
         if not row:
             raise ValueError("Missing item or conflicting revision")
+        # Record closure intents atomically with sale; no external closure is claimed.
+        if payload.get("status") == "sold":
+            import auto_parts_publication
+            auto_parts_publication.record_sale_closures(conn, key)
     return row[0]
 
 def list_items():
