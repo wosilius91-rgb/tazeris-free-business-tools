@@ -57,6 +57,11 @@ def update_item(key, payload, revision):
         row = conn.execute("UPDATE auto_parts_inventory SET payload=%s::jsonb, revision=revision+1 WHERE id=%s AND revision=%s RETURNING revision", (json.dumps(payload,ensure_ascii=False),key,revision)).fetchone()
         if not row:
             raise ValueError("Missing item or conflicting revision")
+        # Record blocked price-sync intents atomically; never claim remote updates.
+        if payload.get("status") == "available":
+            from auto_parts_domain import money
+            import auto_parts_publication
+            auto_parts_publication.record_price_update_intents(conn, key, money(payload["quick"]))
         # Record closure intents atomically with sale; no external closure is claimed.
         if payload.get("status") == "sold":
             import auto_parts_publication
