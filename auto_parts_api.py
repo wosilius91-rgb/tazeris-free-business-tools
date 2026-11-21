@@ -129,8 +129,8 @@ def handle(h):
                     item.pop("id")
                     item["quick"]=cents/100
                     new_revision=store.update_item(key,item,revision)
-                    intents=publication_intents(key,"update",cents)
-                    reply(h,200,{"revision":new_revision,"publication":"not_connected","blocked_updates":intents})
+                    # update_item records publication intents in the same DB transaction.
+                    reply(h,200,{"revision":new_revision,"publication":"not_connected","publication_intents":"recorded_atomically"})
             elif re.fullmatch(r"/api/items/[0-9a-f-]{36}/sell",path):
                 from auto_parts_domain import money
                 from datetime import datetime, timezone
@@ -144,8 +144,8 @@ def handle(h):
                     item.pop("id")
                     item.update(status="sold",sold_at=datetime.now(timezone.utc).isoformat(),actual_price_cents=money(data["actual_price"]))
                     new_revision=store.update_item(key,item,revision)
-                    intents=publication_intents(key,"close")
-                    reply(h,200,{"revision":new_revision,"publication":"not_connected","blocked_closures":intents})
+                    # update_item records closure intents in the same DB transaction.
+                    reply(h,200,{"revision":new_revision,"publication":"not_connected","closure_intents":"recorded_atomically"})
             else: reply(h,404,{"error":"Not found"})
         else: reply(h,405,{"error":"Method not allowed"})
     except (ValueError,TypeError,KeyError): reply(h,400,{"error":"Invalid request"})
