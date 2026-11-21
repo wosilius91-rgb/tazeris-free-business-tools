@@ -37,11 +37,11 @@ class Handler(BaseHTTPRequestHandler):
       vals={v for v in vals if 1<=v<=10000}
       if len(vals)==1:
        v=next(iter(vals))
-       if 1<=v<=10000:out.append(dict(price=v,url=url,title=title));seen.add(url)
+       if 1<=v<=10000:out.append(dict(price=v,url=url,title=title,verified=False,source='search_snippet'));seen.add(url)
     out.sort(key=lambda x:x['price'])
     if q and not results and failures:
      self.send(503,json.dumps({'error':'Paieškos šaltiniai laikinai nepasiekiami','prices':[]}).encode(),'application/json');return
-    self.send(200,json.dumps({'prices':out}).encode(),'application/json')
+    self.send(200,json.dumps({'prices':out,'verification':'unverified_search_snippets','notice':'Kainos rastos paieškos ištraukose; originalūs skelbimai nepatikrinti. Nevertinti kaip patvirtintų rinkos kainų.'}).encode(),'application/json')
    except Exception:self.send(503,b'{"error":"Paieska laikinai nepasiekiama","prices":[]}','application/json')
   else:self.send(404,b'Not found','text/plain')
 if __name__=='__main__':
