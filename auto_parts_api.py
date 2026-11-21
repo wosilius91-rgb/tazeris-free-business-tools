@@ -31,6 +31,15 @@ def body(h):
 def public_item(x):
     return {k:x[k] for k in ("id","name","description","market","quick","status","sold_at","photo","actual_price_cents") if k in x}
 
+def publication_intents(item_id, action, quick_price_cents=None):
+    import auto_parts_publication as publication
+    with store.connection() as conn:
+        if action == "close":
+            return publication.record_sale_closures(conn, item_id)
+        if action == "update":
+            return publication.record_price_update_intents(conn, item_id, quick_price_cents)
+        raise ValueError("Invalid action")
+
 def handle(h):
     path=urlparse(h.path).path
     if not path.startswith("/api/"): return False
@@ -119,8 +128,9 @@ def handle(h):
                     revision=item.pop("revision")
                     item.pop("id")
                     item["quick"]=cents/100
-                    reply(h,200,{"revision":store.update_item(key,item,revision),
-                                 "publication":"not_connected"})
+                    new_revision=store.update_item(key,item,revision)
+                    intents=publication_intents(key,"update",cents)
+                    reply(h,200,{"revision":new_revision,"publication":"not_connected","blocked_updates":intents})
             elif re.fullmatch(r"/api/items/[0-9a-f-]{36}/sell",path):
                 from auto_parts_domain import money
                 from datetime import datetime, timezone
@@ -133,7 +143,9 @@ def handle(h):
                     revision=item.pop("revision")
                     item.pop("id")
                     item.update(status="sold",sold_at=datetime.now(timezone.utc).isoformat(),actual_price_cents=money(data["actual_price"]))
-                    reply(h,200,{"revision":store.update_item(key,item,revision)})
+                    new_revision=store.update_item(key,item,revision)
+                    intents=publication_intents(key,"close")
+                    reply(h,200,{"revision":new_revision,"publication":"not_connected","blocked_closures":intents})
             else: reply(h,404,{"error":"Not found"})
         else: reply(h,405,{"error":"Method not allowed"})
     except (ValueError,TypeError,KeyError): reply(h,400,{"error":"Invalid request"})
