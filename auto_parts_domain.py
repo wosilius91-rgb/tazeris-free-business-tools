@@ -37,6 +37,25 @@ def sales_report(items, period, now):
 
 def validate_valuation(market, quick, sources):
     m, q = money(market), money(quick)
-    if not 0 < q <= m or len({s["url"] for s in sources if s.get("url","").startswith("https://")}) < 2:
-        raise ValueError("Reikia bent dviejų šaltinių ir pagrįstų kainų")
+    if not 0 < q <= m:
+        raise ValueError("Neteisingas rinkos ir greito pardavimo kainų santykis")
+    if not isinstance(sources, list) or not 2 <= len(sources) <= 50:
+        raise ValueError("Reikia 2–50 kainų šaltinių")
+    from urllib.parse import urlsplit
+    urls = set()
+    for source in sources:
+        if not isinstance(source, dict) or not isinstance(source.get("url"), str):
+            raise ValueError("Netinkamas kainos šaltinis")
+        url = source["url"]
+        if len(url) > 2048 or any(ord(ch) < 32 for ch in url):
+            raise ValueError("Netinkamas šaltinio adresas")
+        parsed = urlsplit(url)
+        if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+            raise ValueError("Šaltiniui būtinas HTTPS adresas")
+        price = money(source.get("price"))
+        if price <= 0:
+            raise ValueError("Šaltinyje nenurodyta tinkama kaina")
+        urls.add(url)
+    if len(urls) < 2:
+        raise ValueError("Reikia bent dviejų skirtingų kainų šaltinių")
     return m, q
