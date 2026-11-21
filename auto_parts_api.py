@@ -29,7 +29,7 @@ def body(h):
     return json.loads(h.rfile.read(n))
 
 def public_item(x):
-    return {k:x[k] for k in ("id","name","description","market","quick","status","sold_at","photo","actual_price_cents") if k in x}
+    return {k:x[k] for k in ("id","name","description","market","quick","status","sold_at","photo") if k in x}
 
 def publication_intents(item_id, action, quick_price_cents=None):
     import auto_parts_publication as publication
