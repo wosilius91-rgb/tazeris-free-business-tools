@@ -18,7 +18,12 @@ class Handler(BaseHTTPRequestHandler):
    with open(os.path.join(os.path.dirname(__file__),'auto-parts-workshop.webp'),'rb') as f:
     self.send(200,f.read(),'image/webp')
   elif p.path=='/prices':
-   q=parse_qs(p.query).get('q',[''])[0][:200]
+   # Price research is an administrator operation; do not expose costly searches publicly.
+   if not auto_parts_api.admin(self):
+    self.send(401,b'{"error":"Unauthorized"}','application/json');return
+   q=parse_qs(p.query).get('q',[''])[0].strip()[:200]
+   if len(q)<3:
+    self.send(400,b'{"error":"Search query too short"}','application/json');return
    out=[];seen=set()
    try:
     if q:
@@ -31,7 +36,7 @@ class Handler(BaseHTTPRequestHandler):
       for batch in pool.map(lookup,[q+' used car part price EUR',q+' naudota detalė kaina €',q+' spare part €',q+' gebraucht Ersatzteil EUR']):results.extend(batch)
      for x in results:
       url=x.get('href','');title=x.get('title','');body=x.get('body','')
-      if url in seen or urlparse(url).scheme not in ('http','https'):continue
+      if url in seen or urlparse(url).scheme != 'https':continue
       matches=re.findall(r'(?:€\s*(\d+(?:[.,]\d{1,2})?)|(\d+(?:[.,]\d{1,2})?)\s*(?:€|EUR\b))',title+' '+body,re.I)
       vals={float((a or b).replace(',','.')) for a,b in matches}
       vals={v for v in vals if 1<=v<=10000}
