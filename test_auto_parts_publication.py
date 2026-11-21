@@ -17,6 +17,12 @@ class PublicationSafetyTests(unittest.TestCase):
             with self.subTest(price=price), self.assertRaises(ValueError):
                 validate_job("skelbiu_lt", "publish", price)
 
+    def test_zero_price_cannot_be_published_or_updated(self):
+        for platform in PLATFORMS:
+            for action in ("publish", "update"):
+                with self.subTest(platform=platform, action=action), self.assertRaises(ValueError):
+                    validate_job(platform, action, 0)
+
     def test_invalid_platform_or_action(self):
         for platform, action in (("unknown", "publish"), ("skelbiu_lt", "delete")):
             with self.assertRaises(ValueError):
