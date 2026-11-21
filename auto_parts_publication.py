@@ -15,7 +15,8 @@ def validate_job(platform, action, quick_price_cents):
         raise ValueError("Unknown platform")
     if action not in SUPPORTED_ACTIONS:
         raise ValueError("Unknown action")
-    if type(quick_price_cents) is not int or quick_price_cents < 0:
+    if (type(quick_price_cents) is not int or quick_price_cents < 0
+            or (action in ("publish", "update") and quick_price_cents == 0)):
         raise ValueError("Invalid quick sale price")
     if platform not in ENABLED_CONNECTORS:
         raise RuntimeError("Authorized connector not configured or verified")
