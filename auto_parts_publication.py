@@ -103,3 +103,21 @@ def listing_status(conn, inventory_id):
         "connectors": {platform: ("enabled" if platform in ENABLED_CONNECTORS
             else "not_connected") for platform in PLATFORMS},
     }
+
+def record_price_update_intents(conn, inventory_id, quick_price_cents):
+    """Record blocked update requests for existing external listings.
+
+    No platform request is sent unless an authorized connector is added later.
+    Only the inventory quick-sale price is used.
+    """
+    if type(quick_price_cents) is not int or quick_price_cents <= 0:
+        raise ValueError("Invalid quick sale price")
+    initialize(conn)
+    rows = conn.execute("""SELECT platform FROM auto_parts_external_listings
+        WHERE inventory_id=%s AND external_id IS NOT NULL
+          AND status IN ('active','published')
+          AND last_price_cents IS DISTINCT FROM %s""",
+        (inventory_id, quick_price_cents)).fetchall()
+    for (platform,) in rows:
+        record_blocked(conn, inventory_id, platform, "update", quick_price_cents)
+    return len(rows)
