@@ -50,6 +50,13 @@ def insert_item(payload):
     key = str(uuid.uuid4())
     with connection() as conn:
         conn.execute("INSERT INTO auto_parts_inventory (id,payload) VALUES (%s,%s::jsonb)", (key,json.dumps(payload,ensure_ascii=False)))
+        # Persist publication intentions atomically; never post without a verified connector.
+        from auto_parts_domain import money
+        import auto_parts_publication
+        quick_cents = money(payload["quick"])
+        if payload.get("status") == "available" and quick_cents > 0:
+            for platform in auto_parts_publication.PLATFORMS:
+                auto_parts_publication.record_blocked(conn, key, platform, "publish", quick_cents)
     return key
 
 def update_item(key, payload, revision):
