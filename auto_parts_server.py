@@ -31,12 +31,13 @@ class Handler(BaseHTTPRequestHandler):
    try:
     if q:
      results=[]; failures=[]
-     def lookup(query):
-      try:return DDGS(timeout=8).text(query,region='wt-wt',max_results=15)
+     def lookup(request):
+      query,region=request
+      try:return DDGS(timeout=8).text(query,region=region,max_results=15)
       except Exception as e:
        failures.append(type(e).__name__);return []
      with ThreadPoolExecutor(max_workers=4) as pool:
-      for batch in pool.map(lookup,[q+' used car part price EUR',q+' naudota detalė kaina €',q+' spare part €',q+' gebraucht Ersatzteil EUR']):results.extend(batch)
+      for batch in pool.map(lookup,[(q+' naudota detalė kaina €','lt-lt'),(q+' naudotos autodetalės parduoda €','lt-lt'),(q+' used car part price EUR','wt-wt'),(q+' gebraucht Ersatzteil EUR','de-de')]):results.extend(batch)
      for x in results:
       url=x.get('href','');title=x.get('title','');body=x.get('body','')
       if url in seen or urlparse(url).scheme != 'https':continue
