@@ -21,6 +21,14 @@ class AuthenticationSecurityTests(unittest.TestCase):
             with patch.object(auth.time, "time", return_value=auth.time.time() + auth.TTL + 1):
                 self.assertFalse(auth.valid_session(token))
 
+    def test_malformed_session_payload_fails_closed(self):
+        import hmac
+        import hashlib
+        with patch.dict(os.environ, {"AUTO_PARTS_SESSION_SECRET": "s" * 48}):
+            for body in ("%", "!!!", "////", "8J-YgA=="):
+                signature = hmac.new(b"s" * 48, body.encode(), hashlib.sha256).hexdigest()
+                self.assertFalse(auth.valid_session(body + "." + signature))
+
     def test_missing_secret_fails_closed(self):
         with patch.dict(os.environ, {}, clear=True):
             self.assertFalse(auth.valid_session("invalid.token"))
