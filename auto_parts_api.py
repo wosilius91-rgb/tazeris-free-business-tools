@@ -132,7 +132,7 @@ def handle(h):
                 else:
                     # Only the warehouse quick-sale price may be published externally.
                     cents=money(data["quick"])
-                    if cents<=0: raise ValueError("Invalid quick price")
+                    if cents<=0 or cents>money(item["market"]): raise ValueError("Quick price must be positive and not exceed market price")
                     revision=item.pop("revision")
                     item.pop("id")
                     item["quick"]=cents/100
