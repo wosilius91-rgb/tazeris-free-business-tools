@@ -25,6 +25,9 @@ class Handler(BaseHTTPRequestHandler):
    if len(q)<3:
     self.send(400,b'{"error":"Search query too short"}','application/json');return
    out=[];seen=set()
+   # Reject obviously unrelated search hits; snippets remain unverified evidence.
+   tokens=[t for t in re.findall(r'[\w-]+',q.casefold()) if len(t)>=3]
+   identifiers=[t for t in tokens if any(c.isdigit() for c in t)]
    try:
     if q:
      results=[]; failures=[]
@@ -37,6 +40,9 @@ class Handler(BaseHTTPRequestHandler):
      for x in results:
       url=x.get('href','');title=x.get('title','');body=x.get('body','')
       if url in seen or urlparse(url).scheme != 'https':continue
+      searchable=(title+' '+body).casefold()
+      if identifiers and not any(t in searchable for t in identifiers):continue
+      if tokens and sum(t in searchable for t in tokens)<min(2,len(tokens)):continue
       matches=re.findall(r'(?:€\s*(\d+(?:[.,]\d{1,2})?)|(\d+(?:[.,]\d{1,2})?)\s*(?:€|EUR\b))',title+' '+body,re.I)
       vals={float((a or b).replace(',','.')) for a,b in matches}
       vals={v for v in vals if 1<=v<=10000}
