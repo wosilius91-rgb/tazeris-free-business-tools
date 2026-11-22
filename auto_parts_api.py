@@ -56,6 +56,14 @@ def handle(h):
                     items=[public_item(x) for x in items if public_visible(x,now)]
                 reply(h,200,{"items":items})
             elif re.fullmatch(r"/api/image/[0-9a-f]{64}",path):
+                image_path=path
+                if not admin(h):
+                    # An uploaded but unpublished image must not be accessible publicly.
+                    from datetime import datetime, timezone
+                    from auto_parts_domain import public_visible
+                    visible=any(x.get("photo")==image_path and public_visible(x,datetime.now(timezone.utc)) for x in store.list_items())
+                    if not visible:
+                        reply(h,404,{"error":"Not found"});return True
                 item=store.get_image(path.rsplit("/",1)[1])
                 if not item: reply(h,404,{"error":"Not found"})
                 else: h.send(200,item[1],item[0])
