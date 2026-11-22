@@ -6,6 +6,7 @@ import hashlib
 import secrets
 import base64
 import json
+import binascii
 
 TTL = 8 * 3600
 
@@ -47,7 +48,7 @@ def valid_session(token):
             return False
         payload = json.loads(base64.urlsafe_b64decode(body))
         return int(time.time()) < payload["exp"] <= int(time.time()) + TTL
-    except (ValueError, TypeError, KeyError, RuntimeError, AttributeError):
+    except (ValueError, TypeError, KeyError, RuntimeError, AttributeError, binascii.Error, UnicodeError):
         return False
 
 def session_cookie(token):
