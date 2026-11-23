@@ -94,7 +94,7 @@ def handle(h):
             if path=="/api/login":
                 credentials=body(h)
                 store.initialize()
-                if not store.reserve_login_attempt():
+                if not store.reserve_login_attempt(h.client_address[0]):
                     reply(h,429,{"error":"Per daug bandymų. Bandykite vėliau."})
                 elif not auth.verify_password(credentials.get("password")):
                     reply(h,401,{"error":"Neteisingas slaptažodis"})
