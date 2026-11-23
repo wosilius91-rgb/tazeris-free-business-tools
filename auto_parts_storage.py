@@ -81,15 +81,23 @@ def list_items():
     return [dict(payload,id=str(key),revision=revision) for key,payload,revision in rows]
 
 
-def reserve_login_attempt():
-    """Global persistent throttle, atomic across workers."""
+def reserve_login_attempt(client_address):
+    """Persistent per-client throttle; never trust spoofable forwarded headers."""
+    if not isinstance(client_address, str) or len(client_address) > 128:
+        return False
+    # Hash the address to avoid retaining raw client IPs.
+    fingerprint = hashlib.sha256(client_address.encode("utf-8")).hexdigest()
     with connection() as conn:
-        conn.execute("""CREATE TABLE IF NOT EXISTS auto_parts_login_throttle (
-            bucket bigint PRIMARY KEY, attempts integer NOT NULL)""")
-        conn.execute("DELETE FROM auto_parts_login_throttle WHERE bucket < floor(extract(epoch from now()) / 900)::bigint - 1")
-        row = conn.execute("""INSERT INTO auto_parts_login_throttle (bucket, attempts)
-            VALUES (floor(extract(epoch from now()) / 900)::bigint, 1)
-            ON CONFLICT (bucket) DO UPDATE SET attempts=auto_parts_login_throttle.attempts+1
-            WHERE auto_parts_login_throttle.attempts < 5
-            RETURNING attempts""").fetchone()
+        conn.execute("""CREATE TABLE IF NOT EXISTS auto_parts_login_throttle_v2 (
+            bucket bigint NOT NULL, fingerprint text NOT NULL,
+            attempts integer NOT NULL,
+            PRIMARY KEY (bucket, fingerprint))""")
+        conn.execute("""DELETE FROM auto_parts_login_throttle_v2
+            WHERE bucket < floor(extract(epoch from now()) / 900)::bigint - 1""")
+        row = conn.execute("""INSERT INTO auto_parts_login_throttle_v2 (bucket, fingerprint, attempts)
+            VALUES (floor(extract(epoch from now()) / 900)::bigint, %s, 1)
+            ON CONFLICT (bucket, fingerprint) DO UPDATE
+            SET attempts=auto_parts_login_throttle_v2.attempts+1
+            WHERE auto_parts_login_throttle_v2.attempts < 5
+            RETURNING attempts""", (fingerprint,)).fetchone()
         return row is not None
